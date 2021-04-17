@@ -1,3 +1,3 @@
-import Button from "./components/Button";
+import { IdProvider as ComponentIdProvider } from "@radix-ui/react-id";
 
-export { Button };
+export { ComponentIdProvider };

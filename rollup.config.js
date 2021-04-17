@@ -1,5 +1,6 @@
 import typescript from "rollup-plugin-typescript2";
 import pkg from "./package.json";
+import { nodeResolve } from "@rollup/plugin-node-resolve";
 
 export default {
   input: "src/main.tsx",
@@ -12,6 +13,6 @@ export default {
       strict: false,
     },
   ],
-  plugins: [typescript()],
+  plugins: [typescript(), nodeResolve()],
   external: ["react", "react-dom"],
 };
