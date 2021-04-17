@@ -1,4 +1,7 @@
-import { IdProvider as ComponentIdProvider } from "@radix-ui/react-id";
-import DarkModeSwitch from "./components/switches/DarkMode";
+import ForgeUiProvider from "src/components/ForgeUiProvider";
+import { globalStyles } from "src/stitches.config";
+import SsrThemeConfig from "src/components/SsrThemeConfig";
+import DarkThemeSwitch from "src/components/switches/DarkThemeSwitch";
 
-export { ComponentIdProvider, DarkModeSwitch };
+export { ForgeUiProvider, globalStyles, SsrThemeConfig };
+export { DarkThemeSwitch };

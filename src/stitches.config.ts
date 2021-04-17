@@ -1,6 +1,6 @@
 import { createCss } from "@stitches/react";
 
-export const { theme, styled, css } = createCss({
+export const { theme, styled, css, global, getCssString } = createCss({
   utils: {
     // @ts-ignore
     m: (config) => (value) => ({
@@ -50,8 +50,10 @@ export const { theme, styled, css } = createCss({
     sm: "(max-width: 768px)",
     md: "(max-width: 1024px)",
     lg: "(min-width: 1025px)",
+    dark: "(prefers-color-scheme: dark)",
   },
   theme: {
+    radii: { round: "50%" },
     colors: {
       bg: "#FFF9F6",
       font: "#17080d",
@@ -99,5 +101,27 @@ export const darkTheme = theme({
   colors: {
     bg: "#17080d",
     font: "#FFF9F6",
+  },
+});
+
+export const globalStyles = global({
+  "@dark": {
+    // notice the `media` definition on the stitches.config.ts file
+    ":root:not(.light)": {
+      // @ts-ignore
+      ...Object.keys(darkTheme.colors).reduce((varSet, currentColorKey) => {
+        // @ts-ignore
+        const currentColor = darkTheme.colors[currentColorKey];
+        const currentColorValue =
+          currentColor.value.substring(0, 1) === "$"
+            ? `$colors${currentColor.value}`
+            : currentColor.value;
+
+        return {
+          [currentColor.variable]: currentColorValue,
+          ...varSet,
+        };
+      }, {}),
+    },
   },
 });
