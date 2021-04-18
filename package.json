@@ -20,13 +20,11 @@
     "commit": "git-cz"
   },
   "dependencies": {
-    "@radix-ui/react-id": "^0.0.5",
-    "@radix-ui/react-switch": "^0.0.11",
-    "@stitches/react": "^0.1.7",
-    "next-themes": "^0.0.14",
-    "react-bootstrap-icons": "^1.4.0",
-    "react-calendar": "^3.4.0",
-    "react-date-picker": "^8.1.1"
+    "@chakra-ui/react": "^1.5.1",
+    "@emotion/react": "^11.1.5",
+    "@emotion/styled": "^11.3.0",
+    "framer-motion": "^4.1.4",
+    "react-bootstrap-icons": "^1.4.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^18.0.0",
