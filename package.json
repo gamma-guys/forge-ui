@@ -19,13 +19,6 @@
     "start": "rollup -c -w",
     "commit": "git-cz"
   },
-  "dependencies": {
-    "@chakra-ui/react": "^1.5.1",
-    "@emotion/react": "^11.1.5",
-    "@emotion/styled": "^11.3.0",
-    "framer-motion": "^4.1.4",
-    "react-bootstrap-icons": "^1.4.0"
-  },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^18.0.0",
     "@rollup/plugin-node-resolve": "^11.2.1",
