@@ -2,9 +2,11 @@ import * as React from "react";
 import { IdProvider } from "@radix-ui/react-id";
 import { ReactNode } from "react";
 import { ThemeProvider } from "next-themes";
-import { darkTheme } from "src/stitches.config";
+import { darkTheme, globalStyles } from "src/stitches.config";
 
 const ForgeUiProvider = ({ children }: { children: ReactNode }) => {
+  globalStyles();
+
   return (
     <IdProvider>
       <ThemeProvider
